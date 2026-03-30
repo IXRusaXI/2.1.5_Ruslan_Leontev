@@ -1,8 +1,3 @@
-@use 'styles' as *;
-@use 'styles/reset.scss';
-@use 'styles/fonts.scss';
-@use 'styles/breakpoints.scss' as breakpoints;
-
 body {
   margin: 0;
   display: flex;
@@ -20,33 +15,3 @@ body {
   margin: 0 auto;
 }
 
-.mr-20 {
-  margin-right: 20px;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-}
-
-.flx-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.flx-right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.mt-50 {
-  margin-top: 50px;
-}
-
-.cp {
-  cursor: pointer;
-}
-
-.w-100 {
-  width: 170px;
-}

@@ -1,29 +1,23 @@
 import './style.scss';
-import Add from '../assets/icons/add.svg?react';
-import { AddEditTaskModal } from '../AddEditTaskModal/AddEditTaskModal';
-import { Button } from '../Button/Button';
-import { DeleteModal } from '../DeleteModal/DeleteModal';
-import { TaskCard } from '../TaskCard/TaskCard';
-import { taskList } from '../serverData/taskList';
+import { PostCard } from '../PostCard/PostCard';
 
-export const TodoList = () => {
-  const showAddEditModal = false;
-  const showDeleteModal = false;
+interface PostListProps {
+  postList: []
+}
+
+export const TodoList = ({postList}: PostListProps) => {
   return (
     <>
       <div className="page-wrapper">
         <div className="top-title">
-          <h2>Список задач</h2>
-          <Button title="Добавить задачу" icon={<Add />} onClick={() => {}} />
+          <h2>Список постов</h2>
         </div>
         <div className="task-container">
-          {taskList.map((task) => (
-            <TaskCard task={task} />
+          {postList.map((post) => (
+            <PostCard post={post} />
           ))}
         </div>
       </div>
-      {showAddEditModal && <AddEditTaskModal />}
-      {showDeleteModal && <DeleteModal />}
     </>
   );
 };

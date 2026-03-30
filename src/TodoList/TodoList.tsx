@@ -1,4 +1,3 @@
-import './style.scss';
 import { PostCard } from '../PostCard/PostCard';
 
 interface PostListProps {
@@ -8,16 +7,10 @@ interface PostListProps {
 export const TodoList = ({postList}: PostListProps) => {
   return (
     <>
-      <div className="page-wrapper">
-        <div className="top-title">
-          <h2>Список постов</h2>
-        </div>
-        <div className="task-container">
-          {postList.map((post) => (
-            <PostCard post={post} />
-          ))}
-        </div>
-      </div>
+      <h2>Список постов</h2>
+      {postList.map((post) => (
+        <PostCard key={post.id} post={post} />
+      ))}
     </>
   );
 };

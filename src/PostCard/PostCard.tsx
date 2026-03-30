@@ -2,14 +2,12 @@ import classNames from 'classnames';
 import './style.scss';
 
 export const PostCard = ({
-  task: { id, title, priority, status, progress },
+  post: { id, title, body },
 }) => {
   return (
     <div className="task-card">
-      <div className="flex w-100">
-        <span className="task-title">Задача</span>
-        <span className="task">{title}</span>
-      </div>
+      <span className="task-card__title">{title}</span>
+      <span>{body}</span>
     </div>
   );
 };

@@ -5,17 +5,27 @@ import {useState, useEffect} from 'react'
 const App = () => {
   const [postList, setPostList] = useState([])
 
+  // useEffect(() => {
+  //   console.log('Запуск системы')
+  //     fetch('https://jsonplaceholder.typicode.com/posts')
+  //     .then(resp => resp.json())
+  //     .then(json => {
+  //       console.log('Подгрузка-загрузка комплитед', json)
+  //       setPostList(json)
+  //     })
+  // }, [])
+
   useEffect(() => {
     console.log('Запуск системы')
     setTimeout(() => {
       fetch('https://jsonplaceholder.typicode.com/posts')
       .then(resp => resp.json())
       .then(json => {
-        console.log('Подгрузка-загрузка комплитед', json.length)
+        console.log('Подгрузка-загрузка комплитед', json)
         setPostList(json)
       })
-    }, 1000)
-  }, [])
+    }, 5000)
+  })
 
   return (
     <div className="container">

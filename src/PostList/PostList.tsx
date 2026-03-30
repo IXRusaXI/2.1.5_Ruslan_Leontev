@@ -4,7 +4,7 @@ interface PostListProps {
   postList: []
 }
 
-export const TodoList = ({postList}: PostListProps) => {
+export const PostList = ({postList}: PostListProps) => {
   return (
     <>
       <h2>Список постов</h2>

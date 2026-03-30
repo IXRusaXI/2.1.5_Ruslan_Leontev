@@ -1,5 +1,5 @@
 import './App.scss';
-import { TodoList } from './TodoList/TodoList';
+import {PostList}  from './PostList/PostList';
 import {useState, useEffect} from 'react'
 
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <TodoList postList={postList}/>
+      <PostList postList={postList}/>
     </div>
   );
 };

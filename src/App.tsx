@@ -4,7 +4,6 @@ import {useState, useEffect} from 'react'
 
 const App = () => {
   const [postList, setPostList] = useState([])
-  // const [count, setCount] = useState(1)
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
